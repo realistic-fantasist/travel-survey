@@ -872,8 +872,14 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
 
-            prevBtn.style.display = sectionNum === 1 ? 'none' : 'block';
+            // 첫 번째 섹션에서는 이전 버튼 숨기기
+            if (sectionNum === 1) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'block';
+            }
             
+            // 마지막 섹션에서는 다음 버튼 숨기기
             if (sectionNum === totalSections) {
                 nextBtn.style.display = 'none';
             } else {
@@ -905,7 +911,7 @@
         }
 
         function submitForm() {
-            alert('여행 계획 요청이 성공적으로 제출되었습니다! 곧 연락드리겠습니다. 😊');
+            alert('한국 경험 설계 요청이 성공적으로 제출되었습니다! 곧 연락드리겠습니다. 😊');
         }
 
         // Budget slider functionality
