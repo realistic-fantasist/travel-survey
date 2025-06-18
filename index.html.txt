@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>여행지 설문</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="survey-container">
+    <h1>여행지 설문</h1>
+    <form id="surveyForm">
+      <div class="question">
+        <p>Q1. 다음 중 가장 가고 싶은 여행지는 어디인가요?</p>
+        <label><input type="radio" name="destination" value="제주도" required /> 제주도</label>
+        <label><input type="radio" name="destination" value="강릉" /> 강릉</label>
+        <label><input type="radio" name="destination" value="부산" /> 부산</label>
+        <label><input type="radio" name="destination" value="해외여행" /> 해외여행</label>
+      </div>
+      <button type="submit">제출하기</button>
+    </form>
+    <div id="result" class="hidden"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
