@@ -435,7 +435,7 @@
     </style>
 </head>
 <body>
-<form action="https://formspree.io/f/xdkzdgqw" method="POST">
+<form accept-charset="UTF-8" action="https://formspree.io/f/xdkzdgqw" method="POST">
 <div class="container">
 <div class="header">
 <h1>✈️ 한국 여행 스타일 탐색</h1>
@@ -479,7 +479,7 @@
 <p class="section-subtitle">이번 한국 여정에서 기대하는 나의 모습이나 장면을 말해주세요. 기대하는 분위기의 인물이나 장소의 이미지를 첨부해주셔도 좋습니다.</p>
 <div class="form-group">
 <label class="form-label">기대하는 모습이나 장면을 자유롭게 적어주세요</label>
-<textarea class="form-input" placeholder="예: 카페에서 창밖 뷰를 보며 한참 멍 때리기, 한국인 친구의 소개로 로컬 맛집과 놀이를 경험하기" rows="4"></textarea>
+<textarea class="form-input" name="textarea_1" placeholder="예: 카페에서 창밖 뷰를 보며 한참 멍 때리기, 한국인 친구의 소개로 로컬 맛집과 놀이를 경험하기" rows="4"></textarea>
 </div>
 <div class="form-group">
 <label class="form-label">기대하는 분위기의 이미지 (선택사항)</label>
@@ -521,7 +521,7 @@
 </div>
 <div class="form-group">
 <label class="form-label">꼭 일정에 포함되어야 하는 것이 있나요?</label>
-<textarea class="form-input" placeholder="예: 드라마 주인공이 먹은 떡볶이, 눈썹 반영구, 무신사 쇼핑 등" rows="3"></textarea>
+<textarea class="form-input" name="textarea_2" placeholder="예: 드라마 주인공이 먹은 떡볶이, 눈썹 반영구, 무신사 쇼핑 등" rows="3"></textarea>
 </div>
 </div>
 <!-- Section 3: 여행 스타일 -->
@@ -655,7 +655,7 @@
 </div>
 <div class="form-group">
 <label class="form-label">더 좋은 경험을 위해 알아두면 좋을 것들</label>
-<textarea class="form-input" placeholder="예: 야경이 행복했어요. 매운 음식은 싫어요. 일찍 일어나는 것은 힘들어요." rows="4"></textarea>
+<textarea class="form-input" name="textarea_3" placeholder="예: 야경이 행복했어요. 매운 음식은 싫어요. 일찍 일어나는 것은 힘들어요." rows="4"></textarea>
 </div>
 </div>
 <!-- Section 4: 기본 정보 -->
@@ -664,66 +664,64 @@
 <p class="section-subtitle">여행 계획에 필요한 기본 정보를 알려주세요.</p>
 <div class="form-group">
 <label class="form-label">여행 출발일</label>
-<input class="date-input" type="date"/>
-</div><div class="form-group"><label class="form-label">여행 시작일</label><input class="date-input" type="date"/></div><div class="form-group"><label class="form-label">여행 종료일</label><input class="date-input" type="date"/></div>
+<input class="date-input" name="date_1" type="date"/>
+</div><div class="form-group"><label class="form-label">여행 시작일</label><input class="date-input" name="date_2" type="date"/></div><div class="form-group"><label class="form-label">여행 종료일</label><input class="date-input" name="date_3" type="date"/></div>
 <div class="form-group">
-
-
 </div>
 <div class="form-group">
 <label class="form-label">동행자</label>
 <div class="checkbox-group">
 <div class="checkbox-item">
-<input id="solo" type="checkbox"/>
+<input id="solo" name="checkbox_1" type="checkbox"/>
 <label for="solo">혼자</label>
 </div>
 <div class="checkbox-item">
-<input id="couple" type="checkbox"/>
+<input id="couple" name="checkbox_2" type="checkbox"/>
 <label for="couple">연인/부부</label>
 </div>
 <div class="checkbox-item">
-<input id="friends" type="checkbox"/>
+<input id="friends" name="checkbox_3" type="checkbox"/>
 <label for="friends">친구</label>
 </div>
 <div class="checkbox-item">
-<input id="family" type="checkbox"/>
+<input id="family" name="checkbox_4" type="checkbox"/>
 <label for="family">가족</label>
 </div>
 </div>
 </div>
 <div class="form-group">
 <label class="form-label">한국 방문 횟수</label>
-<select class="form-input"><option>수정</option><option>1회</option><option>2회</option><option>3회 이상</option></select>
+<select class="form-input" name="select_1"><option>수정</option><option>1회</option><option>2회</option><option>3회 이상</option></select>
 </div>
 <div class="form-group">
 <label class="form-label">도움이 필요한 항목 (다중 선택)</label>
 <div class="checkbox-group">
 <div class="checkbox-item">
-<input id="itinerary" type="checkbox"/>
+<input id="itinerary" name="checkbox_5" type="checkbox"/>
 <label for="itinerary">일정 설계</label>
 </div>
 <div class="checkbox-item">
-<input id="flight" type="checkbox"/>
+<input id="flight" name="checkbox_6" type="checkbox"/>
 <label for="flight">항공</label>
 </div>
 <div class="checkbox-item">
-<input id="accommodation" type="checkbox"/>
+<input id="accommodation" name="checkbox_7" type="checkbox"/>
 <label for="accommodation">숙박</label>
 </div>
 <div class="checkbox-item">
-<input id="transport" type="checkbox"/>
+<input id="transport" name="checkbox_8" type="checkbox"/>
 <label for="transport">교통</label>
 </div>
 <div class="checkbox-item">
-<input id="booking" type="checkbox"/>
+<input id="booking" name="checkbox_9" type="checkbox"/>
 <label for="booking">예약 대행</label>
 </div>
 <div class="checkbox-item">
-<input id="translation" type="checkbox"/>
+<input id="translation" name="checkbox_10" type="checkbox"/>
 <label for="translation">통역</label>
 </div>
 <div class="checkbox-item">
-<input id="local_guide" type="checkbox"/>
+<input id="local_guide" name="checkbox_11" type="checkbox"/>
 <label for="local_guide">한국인 친구와 동행</label>
 </div>
 </div>
@@ -731,7 +729,7 @@
 <div class="form-group">
 <label class="form-label">예상 예산 (1인 기준, KRW)</label>
 <div class="budget-slider">
-<input class="slider" id="budgetRange" max="2000000" min="100000" type="range" value="500000"/>
+<input class="slider" id="budgetRange" max="2000000" min="100000" name="range_1" type="range" value="500000"/>
 <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.9rem; color: #7f8c8d;">
 <span>10만원</span>
 <span id="budgetValue">50만원</span>
@@ -749,7 +747,7 @@
 <p class="section-subtitle">맞춤형 여행 계획을 위한 기본 정보를 알려주세요.</p>
 <div class="form-group">
 <label class="form-label">국적</label>
-<select class="form-input">
+<select class="form-input" name="select_2">
 <option>선택해주세요</option>
 <option>미국</option>
 <option>중국</option>
@@ -787,9 +785,8 @@
 </div>
 <div class="form-group">
 <label class="form-label">연락처 (이메일)</label>
-<input class="form-input" placeholder="example@email.com" type="email"/>
+<input class="form-input" name="email_1" placeholder="example@email.com" type="email"/>
 </div>
-
 </div>
 <!-- Section 6: 완료 -->
 <div class="section" id="section6">
@@ -797,7 +794,7 @@
 <h2>🎉 거의 다 완료되었어요!</h2>
 <p>마지막으로 하고 싶은 말이나 특별히 고려해야 할 사항이 있다면 자유롭게 적어주세요.</p>
 <div class="form-group">
-<textarea class="form-input" placeholder="추가로 전달하고 싶은 내용이나 특별한 요청사항을 자유롭게 적어주세요..." rows="5"></textarea>
+<textarea class="form-input" name="textarea_4" placeholder="추가로 전달하고 싶은 내용이나 특별한 요청사항을 자유롭게 적어주세요..." rows="5"></textarea>
 </div>
 <div style="margin: 40px 0; padding: 30px; background: #f8f9ff; border-radius: 15px; border-left: 4px solid #4facfe;">
 <h3 style="color: #2c3e50; margin-bottom: 15px;">✨ Thank you!</h3>
@@ -806,7 +803,7 @@
                             한국에서의 멋진 추억을 함께 만들어가요! 🇰🇷
                         </p>
 </div>
-<button class="btn btn-primary" type="submit" style="font-size: 1.2rem; padding: 20px 40px;">
+<button class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 40px;" type="submit">
                         🚀 여행 계획 요청하기
                     </button>
 </div>
