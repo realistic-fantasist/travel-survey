@@ -210,7 +210,7 @@
 
         .scale-table td:first-child {
             text-align: left;
-            font-weight: 500;
+            font-weight: 200;
             background: #f8f9fa;
         }
 
@@ -830,7 +830,7 @@
 
 <div class="form-group">
 <label class="form-label">연락처</label>
-<select class="form-input" name="messenger_type">
+<select class="form-input" name="messenger_type" style="margin-bottom: 15px;">
 <option value="">메신저를 선택해주세요</option>
 <option value="line">라인</option>
 <option value="WhatsApp">왓츠앱</option>
@@ -838,7 +838,7 @@
 <option value="WeChat">위챗</option>
 </select>
 </div>
-       <textarea class="form-input" name="messenger_id" placeholder="선택한 메신저의 아이디를 정확히 적어주세요. 예시:@learnlivelink"></textarea> <br>
+       <textarea class="form-input" name="messenger_id" placeholder="선택한 메신저의 아이디를 정확히 적어주세요. 예시:@learnlivelink" style="margin-bottom: 15px;"></textarea> <br>
 
 <div class="form-group">
 <input class="form-input" name="email" placeholder="이메일을 적어주세요. 예시:ong-lab@ong-lab.co.kr" type="email"/>
@@ -867,7 +867,7 @@
 </div>
 </form>
 
-<div class="navigation">
+<div class="navigation" style="justify-contect: flex-end;">
 <button type="button" class="btn btn-secondary" id="prevBtn" onclick="changeSection(-1)">◀ 이전</button>
 <button type="button" class="btn btn-primary" id="nextBtn" onclick="changeSection(1)">다음 ▶</button>
 </div>
