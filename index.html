@@ -648,8 +648,8 @@
 지난 여행에서 나를 행복하게 했던 경험, 어렵게 했던 경험이 있다면 알려주세요. 알레르기, 식단 취향, 종교 등 주의할 사항이 있다면 적어주세요. </label>
 <textarea class="form-input" placeholder="예: 야경이 행복했어요. 매운 음식은 싫어요. 일찍 일어나는 것은 힘들어요." rows="4"></textarea>
 </div>
-</div>
 
+<!-- 오류 1,2 수정: 이 부분을 섹션3 내부로 이동하고 form-group으로 감싸기 -->
 <div class="form-group">
 <label class="form-label">평소 일상에서 관심이 높거나 중요하게 생각하는 키워드는 무엇인가요? 모두 선택해주세요. (다중 선택)</label>
 <div class="tag-group">
@@ -663,9 +663,9 @@
 <div class="tag" onclick="toggleTag(this)">사진/영상</div>
 <div class="tag" onclick="toggleTag(this)">독서/학습</div>
 <div class="tag" onclick="toggleTag(this)">게임/엔터테인먼트</div>
-       <div class="tag" onclick="toggleTag(this)">한국</div>
+<div class="tag" onclick="toggleTag(this)">한국</div>
 <div class="tag" onclick="toggleTag(this)">나이트라이프</div>
-       <div class="tag" onclick="toggleTag(this)">핫플레이스</div>
+<div class="tag" onclick="toggleTag(this)">핫플레이스</div>
 <div class="tag" onclick="toggleTag(this)">카페/커피</div>
 <div class="tag" onclick="toggleTag(this)">새로운 관계 형성</div>
 <div class="tag" onclick="toggleTag(this)">건축/디자인</div>
@@ -673,12 +673,12 @@
 <div class="tag" onclick="toggleTag(this)">자극적인/강렬한</div>
 <div class="tag" onclick="toggleTag(this)">달콤한/로맨틱한</div>
 <div class="tag" onclick="toggleTag(this)">코믹한/즐거운</div>
-       <div class="tag" onclick="toggleTag(this)">차분한/힐링되는</div>
-       <div class="tag" onclick="toggleTag(this)">액티브한/도전적인</div>
+<div class="tag" onclick="toggleTag(this)">차분한/힐링되는</div>
+<div class="tag" onclick="toggleTag(this)">액티브한/도전적인</div>
 </div>
 </div>
 
-
+</div>
 
 <!-- Section 4: 기본 정보 -->
 <div class="section" id="section4">
@@ -860,8 +860,8 @@
 </form>
 
 <div class="navigation">
-<button class="btn btn-secondary" id="prevBtn" onclick="changeSection(-1)">◀ 이전</button>
-<button class="btn btn-primary" id="nextBtn" onclick="changeSection(1)">다음 ▶</button>
+<button type="button" class="btn btn-secondary" id="prevBtn" onclick="changeSection(-1)">◀ 이전</button>
+<button type="button" class="btn btn-primary" id="nextBtn" onclick="changeSection(1)">다음 ▶</button>
 </div>
 </div>
 </div>
