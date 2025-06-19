@@ -205,12 +205,14 @@
 
         .scale-table th {
             background: #f8f9fa;
-            font-weight: 600;
+            font-weight: 400;
+Font-size: 0.9rem;
         }
 
         .scale-table td:first-child {
             text-align: left;
-            font-weight: 200;
+            font-weight: 400;
+Font-size: 0.9rem;
             background: #f8f9fa;
         }
 
@@ -476,10 +478,10 @@
 <!-- Section 1: 기대 이미지 -->
 <div class="section active" id="section1">
 <h2 class="section-title">✨  이번 한국 여정에서 기대하는 이미지</h2>
-<p class="section-subtitle">이번 한국 여정에서 기대하는 우리의 모습이나 장면을 말해주세요. 기대하는 분위기의 인물이나 장소의 이미지를 첨부해주셔도 좋습니다.</p>
+<p class="section-subtitle">이번 한국 여정에서 기대하는 당신의 모습이나 장면을 말해주세요. 기대하는 분위기의 인물이나 장소의 이미지를 첨부해주셔도 좋습니다.</p>
 <div class="form-group">
-<label class="form-label">기대하는 우리의 모습이나 장면을 자유롭게 적어주세요.</label>
-<textarea class="form-input" name="expectations" placeholder="예: 한국의 트렌디한 지역에서 한국 스타일링의 쇼핑을 하는 나, 한강에서 라면과 떡볶이 먹는 순간, 한국인 친구를 사귀기" rows="5"></textarea>
+<label class="form-label">기대하는 당신의 모습이나 장면을 자유롭게 적어주세요.</label>
+<textarea class="form-input" name="expectations" placeholder="예: 한국의 트렌디한 지역에서 한국 스타일링의 쇼핑을 하는 나, 한강에서 라면과 떡볶이 먹는 순간, 한국인 친구를 사귀기" rows="5" required/></textarea>
 </div>
 <div class="form-group">
 <label class="form-label">기대하는 분위기의 이미지가 있다면 첨부해주세요. (선택사항)</label>
@@ -489,9 +491,7 @@
 <input accept="image/*" name="expectation_images" id="imageInput" multiple style="display: none;" type="file"/>
 </div>
 </div>
-<div class="example-text">
-<strong>예시:</strong> 카페에서 창밖 뷰를 보며 한참 멍 때리기, 한국인 친구의 소개로 로컬 맛집과 놀이를 경험하기, 드라마 속 주인공처럼 한강에서 치킨과 맥주 즐기기
-                </div>
+
 </div>
 <!-- Section 2: 목적과 테마 -->
 <div class="section" id="section2">
@@ -524,7 +524,7 @@
 </div>
 <div class="form-group">
 <label class="form-label">선택한 키워드 관련하여 꼭 일정에 포함되길 희망하는 경험, 체험, 장소 등을 말해주세요.</label>
-<textarea class="form-input" name="hopeful" placeholder="예: ㅇㅇ 드라마 주인공이 먹은 떡볶이 먹기, 눈썹 반영구 메이크업 하기, 동해 바다 가기 등" rows="3"></textarea>
+<textarea class="form-input" name="hopeful" placeholder="예: ㅇㅇ 드라마 주인공이 먹은 떡볶이 먹기, 눈썹 반영구 메이크업 하기, 동해 바다 가기 등" rows="3" required/></textarea>
 </div>
 </div>
 
@@ -650,7 +650,7 @@
 <textarea class="form-input" name="notice" placeholder="예: 야경이 행복했어요. 매운 음식은 싫어요. 일찍 일어나는 것은 힘들어요." rows="4"></textarea>
 </div>
 
-<!-- 오류 1,2 수정: 이 부분을 섹션3 내부로 이동하고 form-group으로 감싸기 -->
+
 <div class="form-group">
 <label class="form-label">평소 일상에서 관심이 높거나 중요하게 생각하는 키워드는 무엇인가요? 모두 선택해주세요. (다중 선택)</label>
 <div class="tag-group">
@@ -687,8 +687,8 @@
 <p class="section-subtitle">여행 계획에 필요한 기본 정보를 알려주세요.</p>
 
 
-<div class="form-group"><label class="form-label">여행 시작일</label><input class="date-input" name="start_date" type="date"/></div>
-<div class="form-group"><label class="form-label">여행 종료일</label><input class="date-input" name="end_date" type="date"/></div>
+<div class="form-group"><label class="form-label">여행 시작일</label><input class="date-input" name="start_date" type="date" required/></div>
+<div class="form-group"><label class="form-label">여행 종료일</label><input class="date-input" name="end_date" type="date" required/></div>
 <div class="form-group">
 
 
@@ -867,12 +867,18 @@
 </div>
 </form>
 
+<div id="errorMessage" style="display: none; color: #e74c3c; text-align: center; margin-bottom: 20px; padding: 10px; background: #ffeaea; border-radius: 5px; font-weight: 600;">
+필수 응답을 체크해주세요.
+</div>
+
 <div class="navigation" style="justify-contect: flex-end;">
 <button type="button" class="btn btn-secondary" id="prevBtn" onclick="changeSection(-1)">◀ 이전</button>
 <button type="button" class="btn btn-primary" id="nextBtn" onclick="changeSection(1)">다음 ▶</button>
 </div>
 </div>
 </div>
+
+
 <script>
         let currentSection = 1;
         const totalSections = 6;
@@ -917,18 +923,79 @@
         }
 
         function changeSection(direction) {
+
+    // 다음 페이지로 이동할 때만 유효성 검사
+    if (direction === 1) {
+        if (!validateCurrentSection()) {
+            showErrorMessage();
+            return;
+        }
+    }
             const newSection = currentSection + direction;
             if (newSection >= 1 && newSection <= totalSections) {
+       hideErrorMessage();
                 currentSection = newSection;
                 showSection(currentSection);
             }
         }
 
-        function toggleTag(element) {
-            element.classList.toggle('selected');
+function validateCurrentSection() {
+    const currentSectionElement = document.getElementById('section' + currentSection);
+    
+    // 필수 input 체크
+    const requiredInputs = currentSectionElement.querySelectorAll('input[required], textarea[required], select[required]');
+    for (let input of requiredInputs) {
+        if (!input.value.trim()) {
+            return false;
         }
+    }
+    
+    // 섹션별 특별 검증
+    switch(currentSection) {
+        case 2:
+            // 테마 선택 확인
+            const selectedThemes = currentSectionElement.querySelectorAll('.tag.selected');
+            if (selectedThemes.length === 0) {
+                return false;
+            }
+            break;
+        case 4:
+            // 동행자 선택 확인
+            const companionChecked = currentSectionElement.querySelector('input[name="companions"]:checked');
+            if (!companionChecked) {
+                return false;
+            }
+            break;
+        case 5:
+            // 연령대, 성별 선택 확인
+            const ageSelected = document.getElementById('ageGroup').querySelector('.tag.selected');
+            const genderSelected = document.getElementById('genderGroup').querySelector('.tag.selected');
+            if (!ageSelected || !genderSelected) {
+                return false;
+            }
+            break;
+    }
+    
+    return true;
+}
 
-        function selectSingle(element, group) {
+function showErrorMessage() {
+    document.getElementById('errorMessage').style.display = 'block';
+    // 3초 후 자동으로 숨기기
+    setTimeout(hideErrorMessage, 3000);
+}
+
+function hideErrorMessage() {
+    document.getElementById('errorMessage').style.display = 'none';
+}
+
+
+function toggleTag(element, groupName, value) {
+    element.classList.toggle('selected');
+    hideErrorMessage(); // 선택하면 에러 메시지 숨기기
+}
+
+        function selectSingle(element, group, value) {
             // Remove selected class from all elements in the same group
             const siblings = element.parentNode.querySelectorAll('.tag');
             siblings.forEach(sibling => sibling.classList.remove('selected'));
