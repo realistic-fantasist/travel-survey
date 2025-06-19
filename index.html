@@ -515,7 +515,7 @@
 <div class="tag" onclick="toggleTag(this, 'themes', 'connections')">새로운 관계 형성</div>
 <div class="tag" onclick="toggleTag(this, 'themes', 'disign')">건축/디자인</div>
 <div class="tag" onclick="toggleTag(this, 'themes', 'sns')">SNS 촬영</div>
-<div class="tag" onclick="toggleTag(this, 'themes', 'chilling')">자극적인/강렬한</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'chilli')">자극적인/강렬한</div>
 <div class="tag" onclick="toggleTag(this, 'themes', 'romantic')">달콤한/로맨틱한</div>
 <div class="tag" onclick="toggleTag(this, 'themes', 'fun')">코믹한/즐거운</div>
        <div class="tag" onclick="toggleTag(this, 'themes', 'calm')">차분한/힐링되는</div>
@@ -653,28 +653,28 @@
 <div class="form-group">
 <label class="form-label">평소 일상에서 관심이 높거나 중요하게 생각하는 키워드는 무엇인가요? 모두 선택해주세요. (다중 선택)</label>
 <div class="tag-group">
-<div class="tag" onclick="toggleTag(this)">패션/뷰티</div>
-<div class="tag" onclick="toggleTag(this)">음식/요리</div>
-<div class="tag" onclick="toggleTag(this)">문화/예술</div>
-<div class="tag" onclick="toggleTag(this)">스포츠/운동</div>
-<div class="tag" onclick="toggleTag(this)">음악/공연</div>
-<div class="tag" onclick="toggleTag(this)">기술/IT</div>
-<div class="tag" onclick="toggleTag(this)">자연/환경</div>
-<div class="tag" onclick="toggleTag(this)">사진/영상</div>
-<div class="tag" onclick="toggleTag(this)">독서/학습</div>
-<div class="tag" onclick="toggleTag(this)">게임/엔터테인먼트</div>
-<div class="tag" onclick="toggleTag(this)">한국</div>
-<div class="tag" onclick="toggleTag(this)">나이트라이프</div>
-<div class="tag" onclick="toggleTag(this)">핫플레이스</div>
-<div class="tag" onclick="toggleTag(this)">카페/커피</div>
-<div class="tag" onclick="toggleTag(this)">새로운 관계 형성</div>
-<div class="tag" onclick="toggleTag(this)">건축/디자인</div>
-<div class="tag" onclick="toggleTag(this)">SNS 촬영</div>
-<div class="tag" onclick="toggleTag(this)">자극적인/강렬한</div>
-<div class="tag" onclick="toggleTag(this)">달콤한/로맨틱한</div>
-<div class="tag" onclick="toggleTag(this)">코믹한/즐거운</div>
-<div class="tag" onclick="toggleTag(this)">차분한/힐링되는</div>
-<div class="tag" onclick="toggleTag(this)">액티브한/도전적인</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'fashion')">패션/뷰티</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'food')">음식/요리</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'culture')">문화/예술</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'sports')">스포츠/운동</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'music')">음악/공연</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'tech')">기술/IT</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'nature')">자연/환경</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'pic')">사진/영상</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'books')">독서/학습</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'game')">게임/엔터테인먼트</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'travel')">한국</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'nightlife')">나이트라이프</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'hotplace')">핫플레이스</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'cafe')">카페/커피</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'connect')">새로운 관계 형성</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'design')">건축/디자인</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'sns')">SNS</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'chilli')">자극적인/강렬한</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'romantic')">달콤한/로맨틱한</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'fun')">코믹한/즐거운</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'calm')">차분한/힐링되는</div>
+<div class="tag" onclick="toggleTag(this, 'interests', 'active')">액티브한/도전적인</div>
 </div>
 </div>
 
@@ -686,8 +686,8 @@
 <p class="section-subtitle">여행 계획에 필요한 기본 정보를 알려주세요.</p>
 
 
-<div class="form-group"><label class="form-label">여행 시작일</label><input class="date-input" type="date"/></div>
-<div class="form-group"><label class="form-label">여행 종료일</label><input class="date-input" type="date"/></div>
+<div class="form-group"><label class="form-label">여행 시작일</label><input class="date-input" name="start_date" type="date"/></div>
+<div class="form-group"><label class="form-label">여행 종료일</label><input class="date-input" name="end_date" type="date"/></div>
 <div class="form-group">
 
 
@@ -696,74 +696,74 @@
 <label class="form-label">동행자</label>
 <div class="checkbox-group">
 <div class="checkbox-item">
-<input id="solo" type="checkbox"/>
+<input id="solo" name="companions" value="solo" type="checkbox"/>
 <label for="solo">혼자</label>
 </div>
 <div class="checkbox-item">
-<input id="couple" type="checkbox"/>
+<input id="couple" name="companions" value="couple" type="checkbox"/>
 <label for="couple">연인/부부</label>
 </div>
 <div class="checkbox-item">
-<input id="friends" type="checkbox"/>
+<input id="friends" name="companions" value="friends" type="checkbox"/>
 <label for="friends">친구</label>
 </div>
 <div class="checkbox-item">
-<input id="family" type="checkbox"/>
+<input id="family" name="companions" value="family" type="checkbox"/>
 <label for="family">가족</label>
 </div>
 </div>
 </div>
 <div class="form-group">
 <label class="form-label">한국 방문 횟수</label>
-<select class="form-input">
-<option>선택해주세요</option>
-<option>방문 경험 없음</option>
-<option>1회</option>
-<option>2회</option>
-<option>3회 이상</option></select>
+<select class="form-input" name="visit_count">
+<option value="">선택해주세요</option>
+<option value="0">방문 경험 없음</option>
+<option value="1">1회</option>
+<option value="2">2회</option>
+<option value="3+">3회 이상</option></select>
 </div>
 
 <div class="form-group">
 <label class="form-label">도움이 필요한 항목 (다중 선택)</label>
 <div class="checkbox-group">
 <div class="checkbox-item">
-<input id="itinerary" type="checkbox"/>
+<input id="itinerary" name="help_needed" value="itinerary" type="checkbox"/>
 <label for="itinerary">일정 설계(일정에 포함된 예약, 정보 등 포함)</label>
 </div>
        <div class="checkbox-item">
-<input id="transport" type="checkbox"/>
+<input id="transport" name="help_needed" value="transport" type="checkbox"/>
 <label for="transport">교통</label>
 </div>
 <div class="checkbox-item">
-<input id="booking" type="checkbox"/>
+<input id="booking"  name="help_needed" value="booking" type="checkbox"/>
 <label for="booking">예약 대행</label>
 </div>
 <div class="checkbox-item">
-<input id="translation" type="checkbox"/>
+<input id="translation"  name="help_needed" value="translation" type="checkbox"/>
 <label for="translation">통역</label>
 </div>
 <div class="checkbox-item">
-<input id="local_guide" type="checkbox"/>
+<input id="local_guide"  name="help_needed" value="local_guide" type="checkbox"/>
 <label for="local_guide">한국인 친구와 동행</label>
 </div>
        <div class="checkbox-item">
-<input id="local_guide" type="checkbox"/>
-<label for="local_guide">실시간 채팅 도우미</label>
+<input id="chat_guide"  name="help_needed" value="chat_guide" type="checkbox"/>
+<label for="chat_guide">실시간 채팅 도우미</label>
 </div>
 <div class="checkbox-item">
-<input id="flight" type="checkbox"/>
+<input id="flight"  name="help_needed" value="flight" type="checkbox"/>
 <label for="flight">항공 *전문 여행사 연계</label>
 </div>
 <div class="checkbox-item">
-<input id="accommodation" type="checkbox"/>
+<input id="accommodation"  name="help_needed" value="accommondation" type="checkbox"/>
 <label for="accommodation">숙박 *전문 여행사 연계</label>
 </div>
 </div>
 </div>
 <div class="form-group">
-<label class="form-label">예상 예산 (1인 기준, KRW)</label>
+<label class="form-label">예상 1일 예산 (1인 기준, KRW)</label>
 <div class="budget-slider">
-<input class="slider" id="budgetRange" max="2000000" min="100000" type="range" value="500000"/>
+<input class="slider" id="budgetRange" name="budget" max="2000000" min="100000" type="range" value="500000"/>
 <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.9rem; color: #7f8c8d;">
 <span>10만원</span>
 <span id="budgetValue">50만원</span>
@@ -782,62 +782,65 @@
 
 <div class="form-group">
 <label class="form-label">우리가 당신을 어떻게 부를까요? <p> 닉네임도 좋아요. 다만, 정확한 성명이 요구로하는 예약의 경우 성명을 다시 요청할 수 있습니다.</p> </label>
-<textarea class="form-input" rows="1"></textarea>
+<textarea class="form-input" name="name" rows="1"></textarea>
 </div>
 
 <div class="form-group">
 <label class="form-label">국적</label>
 <select class="form-input">
-<option>선택해주세요</option>
-<option>미국</option>
-<option>중국</option>
-<option>일본</option>
-<option>태국</option>
-<option>베트남</option>
-<option>인도네시아</option>
-<option>말레이시아</option>
-<option>싱가포르</option>
-<option>필리핀</option>
-<option>대만</option>
-<option>홍콩</option>
-<option>인도</option>
-<option>호주</option>
-<option>캐나다</option>
-<option>영국</option>
-<option>독일</option>
-<option>프랑스</option>
-<option>기타</option>
+<option value="">선택해주세요</option>
+<option value="the United States">미국</option>
+<option value="china">중국</option>
+<option value="Japan">일본</option>
+<option value="Thailand">태국</option>
+<option value="Vietnam">베트남</option>
+<option value="indonesia">인도네시아</option>
+<option value="male">말레이시아</option>
+<option value="Singapore">싱가포르</option>
+<option value="Phillip">필리핀</option>
+<option value="Taipei">대만</option>
+<option value="Hong Kong">홍콩</option>
+<option value="india">인도</option>
+<option value="Austria">호주</option>
+<option value="Canada">캐나다</option>
+<option value="the United kingdom">영국</option>
+<option value="German">독일</option>
+<option value="france">프랑스</option>
 </select>
 </div>
 <div class="form-group">
 <label class="form-label">연령대</label>
-<div class="tag-group">
-<div class="tag" onclick="selectSingle(this, 'age')">10대</div>
-<div class="tag" onclick="selectSingle(this, 'age')">20대</div>
-<div class="tag" onclick="selectSingle(this, 'age')">30대</div>
-<div class="tag" onclick="selectSingle(this, 'age')">40대</div>
-<div class="tag" onclick="selectSingle(this, 'age')">50대 이상</div>
+<div class="tag-group" id="ageGroup">
+<div class="tag" onclick="selectSingle(this, 'age', '10s')">10대</div>
+<div class="tag" onclick="selectSingle(this, 'age', '20s')">20대</div>
+<div class="tag" onclick="selectSingle(this, 'age', '30s')">30대</div>
+<div class="tag" onclick="selectSingle(this, 'age', '40s')">40대</div>
+<div class="tag" onclick="selectSingle(this, 'age', '50s')">50대</div>
+<div class="tag" onclick="selectSingle(this, 'age', '60s')">60대</div>
+<div class="tag" onclick="selectSingle(this, 'age', '70s')">70대 이상</div>
 </div>
 </div>
 <div class="form-group">
 <label class="form-label">성별</label>
-<div class="tag-group"><div class="tag" onclick="selectSingle(this, 'gender')">여성</div><div class="tag" onclick="selectSingle(this, 'gender')">남성</div></div>
+<div class="tag-group" id="genderGroup">
+<div class="tag" onclick="selectSingle(this, 'gender', 'female')">여성</div>
+<div class="tag" onclick="selectSingle(this, 'gender', 'male')">남성</div></div>
 </div>
 
 <div class="form-group">
 <label class="form-label">연락처</label>
-<select class="form-input">
-<option>메신저를 선택해주세요</option>
-<option>라인</option>
-<option>왓츠앱</option>
-<option>카카오톡</option>
-<option>위챗</option>
+<select class="form-input" name="messenger_type">
+<option value="">메신저를 선택해주세요</option>
+<option value="line">라인</option>
+<option value="WhatsApp">왓츠앱</option>
+<option value="kakaotalk">카카오톡</option>
+<option value="WeChat">위챗</option>
 </select>
 </div>
-       <textarea class="form-input" placeholder="선택한 메신저의 아이디를 정확히 적어주세요. 예시:@learnlivelink"></textarea> <br>
+       <textarea class="form-input" name="messenger_id" placeholder="선택한 메신저의 아이디를 정확히 적어주세요. 예시:@learnlivelink"></textarea> <br>
 
 <div class="form-group">
-<input class="form-input" placeholder="이메일을 적어주세요. 예시:ong-lab@ong-lab.co.kr" type="email"/>
+<input class="form-input" name="email" placeholder="이메일을 적어주세요. 예시:ong-lab@ong-lab.co.kr" type="email"/>
 </div>
 
 </div>
@@ -847,7 +850,7 @@
 <h2>🎉 거의 다 완료되었어요!</h2>
 <p>당신을 위한 일정 설계 전 마지막으로 하고 싶은 말이 있다면 자유롭게 적어주세요.</p>
 <div class="form-group">
-<textarea class="form-input" placeholder="추가로 전달하고 싶은 내용이나 특별한 요청사항을 자유롭게 적어주세요..." rows="5"></textarea>
+<textarea class="form-input" name="final_message" placeholder="추가로 전달하고 싶은 내용이나 특별한 요청사항을 자유롭게 적어주세요..." rows="5"></textarea>
 </div>
 <div style="margin: 40px 0; padding: 30px; background: #f8f9ff; border-radius: 15px; border-left: 4px solid #4facfe;">
 <h3 style="color: #2c3e50; margin-bottom: 15px;">✨ Thank you!</h3>
