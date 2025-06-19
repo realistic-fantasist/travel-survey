@@ -479,14 +479,14 @@
 <p class="section-subtitle">이번 한국 여정에서 기대하는 우리의 모습이나 장면을 말해주세요. 기대하는 분위기의 인물이나 장소의 이미지를 첨부해주셔도 좋습니다.</p>
 <div class="form-group">
 <label class="form-label">기대하는 우리의 모습이나 장면을 자유롭게 적어주세요.</label>
-<textarea class="form-input" placeholder="예: 한국의 트렌디한 지역에서 한국 스타일링의 쇼핑을 하는 나, 한강에서 라면과 떡볶이 먹는 순간, 한국인 친구를 사귀기" rows="5"></textarea>
+<textarea class="form-input" name="expectations" placeholder="예: 한국의 트렌디한 지역에서 한국 스타일링의 쇼핑을 하는 나, 한강에서 라면과 떡볶이 먹는 순간, 한국인 친구를 사귀기" rows="5"></textarea>
 </div>
 <div class="form-group">
 <label class="form-label">기대하는 분위기의 이미지가 있다면 첨부해주세요. (선택사항)</label>
 <div class="image-upload" onclick="document.getElementById('imageInput').click()">
 <div class="upload-icon">📷</div>
 <p>이미지를 클릭하여 업로드하거나 드래그하여 넣어주세요.</p>
-<input accept="image/*" id="imageInput" multiple="" style="display: none;" type="file"/>
+<input accept="image/*" name="expectation_images id="imageInput" multiple="" style="display: none;" type="file"/>
 </div>
 </div>
 <div class="example-text">
@@ -496,35 +496,35 @@
 <!-- Section 2: 목적과 테마 -->
 <div class="section" id="section2">
 <h2 class="section-title">🎯 여행 목적과 테마</h2>
-<p class="section-subtitle">이번 한국 여정에서의 테마나 관심있는 키워드를 모두 선택해 주세요.</p>
+<p class="section-subtitle">이번 한국 여정에서의 테마나 관심있는 키워드를 모두 선택하고 연관하여 꼭 경험하고 싶은 내용을 적어주세요.</p>
 <div class="form-group">
-<label class="form-label">관심있는 테마 (다중 선택 가능)</label>
-<div class="tag-group">
-<div class="tag" onclick="toggleTag(this)">K-POP</div>
-<div class="tag" onclick="toggleTag(this)">K-뷰티</div>
-<div class="tag" onclick="toggleTag(this)">한국 음식</div>
-       <div class="tag" onclick="toggleTag(this)">한글</div>
-<div class="tag" onclick="toggleTag(this)">계절 여행</div>
-<div class="tag" onclick="toggleTag(this)">의료관광</div>
-<div class="tag" onclick="toggleTag(this)">쇼핑</div>
-<div class="tag" onclick="toggleTag(this)">역사/유적</div>
-       <div class="tag" onclick="toggleTag(this)">술</div>
-<div class="tag" onclick="toggleTag(this)">나이트라이프</div>
-       <div class="tag" onclick="toggleTag(this)">핫플레이스</div>
-<div class="tag" onclick="toggleTag(this)">카페/커피</div>
-<div class="tag" onclick="toggleTag(this)">새로운 관계 형성</div>
-<div class="tag" onclick="toggleTag(this)">건축/디자인</div>
-<div class="tag" onclick="toggleTag(this)">SNS 촬영</div>
-<div class="tag" onclick="toggleTag(this)">자극적인/강렬한</div>
-<div class="tag" onclick="toggleTag(this)">달콤한/로맨틱한</div>
-<div class="tag" onclick="toggleTag(this)">코믹한/즐거운</div>
-       <div class="tag" onclick="toggleTag(this)">차분한/힐링되는</div>
-       <div class="tag" onclick="toggleTag(this)">액티브한/도전적인</div>
+<label class="form-label">희망하는 테마나 키워드 (다중 선택 가능)</label>
+<div class="tag-group" id="themeGroup>
+<div class="tag" onclick="toggleTag(this, 'themes', 'kpop')">K-POP</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'kbueaty')">K-뷰티</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'kfood')">한국 음식</div>
+       <div class="tag" onclick="toggleTag(this, 'themes', 'hanger')">한글</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'seasenal')">계절 여행</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'medical')">의료관광</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'shopping')">쇼핑</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'history')">역사/유적</div>
+       <div class="tag" onclick="toggleTag(this, 'themes', 'alcohol')">술</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'nightlife')">나이트라이프</div>
+       <div class="tag" onclick="toggleTag(this, 'themes', 'hotplaces')">핫플레이스</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'cafe')">카페/커피</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'connections')">새로운 관계 형성</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'disign')">건축/디자인</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'sns')">SNS 촬영</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'chilling')">자극적인/강렬한</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'romantic')">달콤한/로맨틱한</div>
+<div class="tag" onclick="toggleTag(this, 'themes', 'fun')">코믹한/즐거운</div>
+       <div class="tag" onclick="toggleTag(this, 'themes', 'calm')">차분한/힐링되는</div>
+       <div class="tag" onclick="toggleTag(this, 'themes', 'active')">액티브한/도전적인</div>
 </div>
 </div>
 <div class="form-group">
 <label class="form-label">선택한 키워드 관련하여 꼭 일정에 포함되길 희망하는 경험, 체험, 장소 등을 말해주세요.</label>
-<textarea class="form-input" placeholder="예: ㅇㅇ 드라마 주인공이 먹은 떡볶이 먹기, 눈썹 반영구 메이크업 하기, 동해 바다 가기 등" rows="3"></textarea>
+<textarea class="form-input" name="hopeful" placeholder="예: ㅇㅇ 드라마 주인공이 먹은 떡볶이 먹기, 눈썹 반영구 메이크업 하기, 동해 바다 가기 등" rows="3"></textarea>
 </div>
 </div>
 <!-- Section 3: 여행 스타일 -->
@@ -555,7 +555,7 @@
 <td><input name="planning" type="radio" value="3"/></td>
 <td><input name="planning" type="radio" value="2"/></td>
 <td><input name="planning" type="radio" value="1"/></td>
-<td><input name="planning" type="radio" value="0"/></td>
+<td><input name="planning" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>일정에 변수가 생기면 스트레스가 크거나 당황스러워 대처하기 어렵다</td>
@@ -564,7 +564,7 @@
 <td><input name="flexibility" type="radio" value="3"/></td>
 <td><input name="flexibility" type="radio" value="2"/></td>
 <td><input name="flexibility" type="radio" value="1"/></td>
-<td><input name="flexibility" type="radio" value="0"/></td>
+<td><input name="flexibility" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>사람이 많은 곳은 선호하지 않는다</td>
@@ -573,7 +573,7 @@
 <td><input name="crowded" type="radio" value="3"/></td>
 <td><input name="crowded" type="radio" value="2"/></td>
 <td><input name="crowded" type="radio" value="1"/></td>
-<td><input name="crowded" type="radio" value="0"/></td>
+<td><input name="crowded" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>나는 아침형 생활을 한다. 생활 시간이 늦을수록 오른쪽에 체크 </td>
@@ -582,7 +582,7 @@
 <td><input name="daytime" type="radio" value="3"/></td>
 <td><input name="daytime" type="radio" value="2"/></td>
 <td><input name="daytime" type="radio" value="1"/></td>
-<td><input name="daytime" type="radio" value="0"/></td>
+<td><input name="daytime" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>새로운 사람들과 대화를 나누거나 다수로부터 주목 받는 것도 즐긴다</td>
@@ -591,7 +591,7 @@
 <td><input name="social" type="radio" value="3"/></td>
 <td><input name="social" type="radio" value="2"/></td>
 <td><input name="social" type="radio" value="1"/></td>
-<td><input name="social" type="radio" value="0"/></td>
+<td><input name="social" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>새로운 환경이나 낯선 곳에서 두려움이 있다</td>
@@ -600,7 +600,7 @@
 <td><input name="safety" type="radio" value="3"/></td>
 <td><input name="safety" type="radio" value="2"/></td>
 <td><input name="safety" type="radio" value="1"/></td>
-<td><input name="safety" type="radio" value="0"/></td>
+<td><input name="safety" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>많이 걷거나 활동적인 일정을 소화할 수 있다</td>
@@ -609,7 +609,7 @@
 <td><input name="active" type="radio" value="3"/></td>
 <td><input name="active" type="radio" value="2"/></td>
 <td><input name="active" type="radio" value="1"/></td>
-<td><input name="active" type="radio" value="0"/></td>
+<td><input name="active" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>트렌드를 경험할 수 있다면 맛집이나 핫플레이스의 웨이팅을 할 수 있다</td>
@@ -618,7 +618,7 @@
 <td><input name="trendy" type="radio" value="3"/></td>
 <td><input name="trendy" type="radio" value="2"/></td>
 <td><input name="trendy" type="radio" value="1"/></td>
-<td><input name="trendy" type="radio" value="0"/></td>
+<td><input name="trendy" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>SNS에 여행 사진을 자주 올린다</td>
@@ -627,7 +627,7 @@
 <td><input name="sns" type="radio" value="3"/></td>
 <td><input name="sns" type="radio" value="2"/></td>
 <td><input name="sns" type="radio" value="1"/></td>
-<td><input name="sns" type="radio" value="0"/></td>
+<td><input name="sns" type="radio" value="모름"/></td>
 </tr>
 <tr>
 <td>다양한 것을 짧게 많이 보는 것보다 적은 것을 길게 깊게 보는 것을 좋아한다</td>
@@ -636,7 +636,7 @@
 <td><input name="waiting" type="radio" value="3"/></td>
 <td><input name="waiting" type="radio" value="2"/></td>
 <td><input name="waiting" type="radio" value="1"/></td>
-<td><input name="waiting" type="radio" value="0"/></td>
+<td><input name="waiting" type="radio" value="모름"/></td>
 </tr>
 </tbody>
 </table>
@@ -646,7 +646,7 @@
 <div class="form-group">
 <label class="form-label">당신의 여정이 더욱 좋게 기억되기 위해 우리가 또 어떤 것을 알아두면 좋을까요? <br> 
 지난 여행에서 나를 행복하게 했던 경험, 어렵게 했던 경험이 있다면 알려주세요. 알레르기, 식단 취향, 종교 등 주의할 사항이 있다면 적어주세요. </label>
-<textarea class="form-input" placeholder="예: 야경이 행복했어요. 매운 음식은 싫어요. 일찍 일어나는 것은 힘들어요." rows="4"></textarea>
+<textarea class="form-input" name="notice" placeholder="예: 야경이 행복했어요. 매운 음식은 싫어요. 일찍 일어나는 것은 힘들어요." rows="4"></textarea>
 </div>
 
 <!-- 오류 1,2 수정: 이 부분을 섹션3 내부로 이동하고 form-group으로 감싸기 -->
@@ -834,7 +834,7 @@
 <option>위챗</option>
 </select>
 </div>
-       <textarea class="form-input" placeholder="선택한 메신저의 아이디를 정확히 적어주세요. 예시:@learnlivelink" rows="1"></textarea>
+       <textarea class="form-input" placeholder="선택한 메신저의 아이디를 정확히 적어주세요. 예시:@learnlivelink"></textarea> <br>
 
 <div class="form-group">
 <input class="form-input" placeholder="이메일을 적어주세요. 예시:ong-lab@ong-lab.co.kr" type="email"/>
